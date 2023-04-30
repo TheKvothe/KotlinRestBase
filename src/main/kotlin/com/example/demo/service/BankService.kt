@@ -12,4 +12,7 @@ class BankService ( private val datasource:BankDataRepositoryI) {
     fun getBank(accountNumber: String): Bank {
         return datasource.retrieveBank(accountNumber)
     }
+    fun addBank (bank: Bank) : Bank = datasource.createBank(bank)
+    fun updateBank(bank: Bank): Bank = datasource.updateBank(bank)
+    fun deleteBank(accountNumber: String): Unit = datasource.deleteBank(accountNumber)
 }
