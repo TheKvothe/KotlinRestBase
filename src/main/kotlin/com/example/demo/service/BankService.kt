@@ -9,4 +9,7 @@ import org.springframework.stereotype.Service
 class BankService ( private val datasource:BankDataRepositoryI) {
 
     fun getBanks () : Collection<Bank> = datasource.retrieveBanks()
+    fun getBank(accountNumber: String): Bank {
+        return datasource.retrieveBank(accountNumber)
+    }
 }
