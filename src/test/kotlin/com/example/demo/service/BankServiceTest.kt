@@ -1,13 +1,12 @@
 package com.example.demo.service
 
-import com.example.demo.repository.BankDataRepositoryI
+import com.example.demo.repository.IBankDataRepository
 import io.mockk.mockk
 import io.mockk.verify
-import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.Test
 
 class BankServiceTest {
-    private val dataSource: BankDataRepositoryI = mockk(relaxed = true)
+    private val dataSource: IBankDataRepository = mockk(relaxed = true)
 
     private val bankService = BankService(dataSource)
     @Test
