@@ -4,13 +4,13 @@ import com.example.demo.model.Bank
 import com.example.demo.repository.IBankDataRepository
 import org.springframework.stereotype.Repository
 
-@Repository("Mock")
-class MockBankDataRepository : IBankDataRepository {
+@Repository("Firebase")
+class FirebaseRepository : IBankDataRepository {
 
     val banks = mutableListOf(
-        Bank("1111", 3.14, 17),
-        Bank("1111", 17.0, 0),
-        Bank("1111", 0.0, 100),
+        Bank("2222", 3.14, 17),
+        Bank("2223", 17.0, 0),
+        Bank("2224", 0.0, 100),
     )
 
     override fun retrieveBanks(): Collection<Bank> = banks

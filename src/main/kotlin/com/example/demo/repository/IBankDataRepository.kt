@@ -2,7 +2,7 @@ package com.example.demo.repository
 
 import com.example.demo.model.Bank
 
-interface BankDataRepositoryI {
+interface IBankDataRepository {
 
     fun retrieveBanks(): Collection<Bank>
     fun retrieveBank(accountNumber : String): Bank
