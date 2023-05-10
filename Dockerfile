@@ -5,5 +5,5 @@ COPY . /work
 WORKDIR /work
 RUN microdnf install findutils
 RUN /work/gradlew build
-RUN mv /work/build/libs/*.jar /work/app.jar
-ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/work/app.jar"]
+RUN mv /work/build/libs/*.jar /work
+ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/work/HackUPC-0.0.1-SNAPSHOT.jar"]
